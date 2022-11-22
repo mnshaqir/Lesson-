@@ -4,33 +4,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cuboid2
+namespace Hello
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Cuboid aCuboid = new Cuboid(2, 3, 4);
+            Console.WriteLine("Hello !");
 
-            aCuboid.ShowAllProperties();
+            int cnt;
+            for (cnt = 5; cnt <= 25; cnt += 5)
+            {
+                Console.Write(cnt + " ");
+            }
+            Console.WriteLine();
 
-            Console.WriteLine("New parameter Height = {0}, Length = {1}, Width = {2}", aCuboid.height, aCuboid.length, aCuboid.width);
-            Console.WriteLine("Volume of Cuboid = {0}", aCuboid.Volume());
-            Console.WriteLine("Surface Area of Cuboid = {0}", aCuboid.SurfaceArea());
+            int year;
+            Console.Write("\n Input number: ");
+
+            year = int.Parse(Console.ReadLine());
+
+            if ((year % 400) == 0)
+            {
+                Console.WriteLine("Leap Year");
+            }
+            else if ((year % 100) == 0)
+            {
+                Console.WriteLine("Not Leap Year");
+            }
+            else if ((year % 4) == 0)
+            {
+                Console.WriteLine("Leap Year");
+            }
+            else
+            {
+                Console.WriteLine("Not Leap Year");
+            }
             Console.ReadKey();
-
         }
     }
-
-    interface Shape3DCalculator
-    {
-        double Volume();
-        double SurfaceArea();
-
-    }
-
-   
-
 }
-
-
