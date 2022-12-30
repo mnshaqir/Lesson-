@@ -23,12 +23,18 @@ namespace _3DCoordinates
             InitializeComponent();
         }
         //*************  CARTERSIAN  ***************//
+
+        private void Cartesian_Click(object sender, EventArgs e)
+        {
+           
+                
+        }
         private void toCylin1_Click(object sender, EventArgs e)
         {
             double temp1;
             double temp2;
             double temp3;
-            
+
             try
             {
                 temp1 = Convert.ToInt32(textX1.Text);
@@ -37,13 +43,6 @@ namespace _3DCoordinates
                 MessageLabel1.Text = "Message: -";
             }
 
-            try
-            {
-                temp1 = null;
-                temp2 = 
-                temp3 = 0(textZ1.Text);
-                MessageLabel1.Text = "Message: -";
-            }
 
             catch (Exception excep)
             {
@@ -67,6 +66,29 @@ namespace _3DCoordinates
         private void toSphe1_Click(object sender, EventArgs e)
             
         {
+            double temp1;
+            double temp2;
+            double temp3;
+
+            try
+            {
+                temp1 = Convert.ToInt32(textX1.Text);
+                temp2 = Convert.ToInt32(textY1.Text);
+                temp3 = Convert.ToInt32(textZ1.Text);
+                MessageLabel1.Text = "Message: -";
+            }
+
+
+            catch (Exception excep)
+            {
+                MessageLabel1.Text = "Message: Please give a valid value.";
+                return;
+            }
+
+            myCartesian.X = temp1;
+            myCartesian.Y = temp2;
+            myCartesian.Z = temp3;
+
             Spherical asphe = new Spherical();
             asphe = myCartesian.ToSpherical1();
 
@@ -78,7 +100,7 @@ namespace _3DCoordinates
         private void Clearbutton1_Click(object sender, EventArgs e)
         {
             {
-                /*textX1.Clear();
+                textX1.Clear();
                 textY1.Clear();
                 textZ1.Clear();
                 textR1.Clear();
@@ -86,29 +108,58 @@ namespace _3DCoordinates
                 textzz1.Clear();
                 textRho1.Clear();
                 textTheta1.Clear();
-                textPhi1.Clear();*/
-              
-                Action<Control.ControlCollection> func = null;
+                textPhi1.Clear();
+                MessageLabel1.Text = "Message: ";
 
-                 func = (controls) =>
+                /*if (textX1.Text == "")
+
+                {
+                    MessageLabel1.Hide();
+                }
+                else
+                {
+                    MessageLabel1.Show();
+                }
+
+                if (textY1.Text == "")
+                {
+                    MessageLabel1.Hide();
+                }
+                else
+                {
+                    MessageLabel1.Show();
+                }
+
+                if (textZ1.Text == "")
+                {
+                    MessageLabel1.Hide();
+                }
+                else
+                {
+                    MessageLabel1.Show();
+                }*/
+                // MessageLabel1.Hide();
+
+                /* Action<Control.ControlCollection> func = null;
+
+                  func = (controls) =>
+                  {
+                      foreach (Control control in controls)
+                          if (control is TextBox)
+                              (control as TextBox).Clear();
+                          else
+                              func(control.Controls);
+                  };
+
+                 /*func = (controls) =>
                  {
                      foreach (Control control in controls)
-                         if (control is TextBox)
-                             (control as TextBox).Clear();
+                         if (control is MessageLabel1)
+                             (control as MessageLabel1).Hide();
                          else
                              func(control.Controls);
                  };
-
-                 func = (controls) =>
-                 {
-                     foreach (Control control in controls)
-                         if (control is Label)
-                             (control as Label).Clear();
-                         else
-                             func(control.Controls);
-                 };
-
-                 func(Controls);
+                 func(Controls);*/
             }
         }
 
@@ -153,7 +204,27 @@ namespace _3DCoordinates
 
         private void toSphe2_Click(object sender, EventArgs e)
         {
+            double temp4;
+            double temp5;
+            double temp6;
 
+            try
+            {
+                temp4 = Convert.ToInt32(textR2.Text);
+                temp5 = Convert.ToInt32(textTeta2.Text);
+                temp6 = Convert.ToInt32(textZ2.Text);
+                MessageLabel2.Text = "Message: -";
+            }
+
+            catch (Exception excep)
+            {
+                MessageLabel2.Text = "Message: Please give a valid value.";
+                return;
+            }
+
+            myCylindrical.R = temp4;
+            myCylindrical.ThetaC = temp5;
+            myCylindrical.ZZ = temp6;
 
             Spherical bsphe = new Spherical();
             bsphe = myCylindrical.ToSpherical2();
@@ -222,6 +293,27 @@ namespace _3DCoordinates
 
         private void toCart3_Click(object sender, EventArgs e)
         {
+            double temp7;
+            double temp8;
+            double temp9;
+
+            try
+            {
+                temp7 = Convert.ToInt32(textRho3.Text);
+                temp8 = Convert.ToInt32(textTheta3.Text);
+                temp9 = Convert.ToInt32(textPhi3.Text);
+                MessageLabel3.Text = "Message: -";
+            }
+
+            catch (Exception excep)
+            {
+                MessageLabel3.Text = "Message: Please give a valid value.";
+                return;
+            }
+
+            mySpherical.Rho = temp7;
+            mySpherical.ThetaS = temp8;
+            mySpherical.Phi = temp9;
 
             Cartesian ccarte = new Cartesian();
             ccarte = mySpherical.ToCartesian3();
@@ -250,6 +342,8 @@ namespace _3DCoordinates
                 func(Controls);
             }
         }
+
+       
 
         //********************************//
 
