@@ -1,0 +1,18 @@
+﻿'Latihan Test.exe' (Win32): Loaded 'C:\Users\ACER\Desktop\Nota VS2019\Latihan Test\Latihan Test\Debug\Latihan Test.exe'. Symbols loaded.
+'Latihan Test.exe' (Win32): Loaded 'C:\Windows\SysWOW64\ntdll.dll'. 
+'Latihan Test.exe' (Win32): Loaded 'C:\Windows\SysWOW64\kernel32.dll'. 
+'Latihan Test.exe' (Win32): Loaded 'C:\Windows\SysWOW64\KernelBase.dll'. 
+'Latihan Test.exe' (Win32): Loaded 'C:\Windows\SysWOW64\vcruntime140d.dll'. 
+'Latihan Test.exe' (Win32): Loaded 'C:\Windows\SysWOW64\ucrtbased.dll'. 
+The thread 0x5b70 has exited with code 0 (0x0).
+'Latihan Test.exe' (Win32): Loaded 'C:\Windows\SysWOW64\kernel.appcore.dll'. 
+'Latihan Test.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msvcrt.dll'. 
+'Latihan Test.exe' (Win32): Loaded 'C:\Windows\SysWOW64\rpcrt4.dll'. 
+'Latihan Test.exe' (Win32): Loaded 'C:\Windows\SysWOW64\sspicli.dll'. 
+'Latihan Test.exe' (Win32): Loaded 'C:\Windows\SysWOW64\cryptbase.dll'. 
+'Latihan Test.exe' (Win32): Loaded 'C:\Windows\SysWOW64\bcryptprimitives.dll'. 
+'Latihan Test.exe' (Win32): Loaded 'C:\Windows\SysWOW64\sechost.dll'. 
+The thread 0x24fc has exited with code 0 (0x0).
+The thread 0x3d40 has exited with code 0 (0x0).
+The thread 0x2398 has exited with code 0 (0x0).
+The program '[6644] Latihan Test.exe' has exited with code 0 (0x0).
